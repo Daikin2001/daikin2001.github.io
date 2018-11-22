@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            height:100vh;
+            overflow:hidden;
+            background: #7289da url("https://www.freeiconspng.com/uploads/mountain-png-23.png");
+            background-size:cover;
+        }
+    </style>
+</head>
+<body>
+    <canvas></canvas>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded",function(){
+        var canvas = document.querySelector("canvas");
+        var c = canvas.getContext("2d");
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        document.addEventListener('resize',function(){
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+        
+        function Snow(){
+            this.radius = Math.random() * 5;
+            this.x = Math.floor(Math.random() * canvas.width);
+            this.y = -this.radius;
+            this.color = "#ffffff";
+            this.velocity = {
+                x: Math.random() * 4 - 2,
+                y: Math.random() * 3 + 2
+            }
+        }
+        
+        Snow.prototype.draw = function(c){
+            c.beginPath();
+            c.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            c.fillStyle = this.color;
+            c.shadowColor = this.color;
+            c.shadowBlur = 30;
+            c.fill();
+            c.closePath();
+        }
+        Snow.prototype.update = function(c){
+            this.y += this.velocity.y;
+            this.x += this.velocity.x;
+            
+            if(this.y >= canvas.height - this.radius)
+            this.velocity.y = 0;
+            this.draw(c);
+        }
+        var arraySnow = [];
+        function init(){
+            for(let i = 0; i< 1; i++)
+            arraySnow.push(new Snow());
+        }
+        
+        function animate(){
+            window.requestAnimationFrame(animate);
+            c.clearRect(0, 0, canvas.width, canvas.height);
+            arraySnow.forEach(function(snow){
+                snow.update(c);
+            });
+            if(arraySnow.length > 800)
+            arraySnow.splice(0,1);
+            init();
+        }
+        
+        animate();
+    });
+</script>
+</html>
