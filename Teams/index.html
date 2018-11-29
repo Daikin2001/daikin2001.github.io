@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Our Team - ZXDaikin</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+        body{
+            margin:0;
+            padding:0;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+            font-family: 'Roboto', sans-serif;
+        }
+        .logo{
+            width:100%;
+            background:url("https://i.imgur.com/b8KMocV.png") center center;
+            background-size:cover;
+        }
+        .container{
+            margin:30px 0px;
+            max-width:80%;
+            display:flex;
+            flex-direction:row;
+            flex-wrap:wrap;
+        }
+        .box{
+            background:#fff;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            padding:30px;
+            box-shadow: 0px 0px 5px rgba(0,0,0,.2);
+            box-sizing:border-box;
+            flex:auto;
+            transition:.3s all ease;
+        }
+        .box:hover{
+            transform:scale(1.02);
+            box-shadow:0px 0px 10px rgba(0,0,0,.8);
+        }
+        .avatar > img{
+            width:100px;
+            height:100px;
+            border-radius:100%;
+        }
+        .box > .name{
+            color:#000;
+            line-height:2rem;
+            font-weight:bold;
+        }
+        .box > .title{
+            color: rgba(0,0,0,.7);
+            font-size:.7rem;
+            line-height:1rem;
+        }
+        .box > .social{
+            width:50%;
+            margin-top:.8rem;
+            display:flex;
+            flex-direction:row;
+            justify-content:space-around;
+            opacity:0;
+            transition:.3s all ease;
+        }
+        .social > a{
+            color:#000;
+            transition:.3s all ease;
+        }
+        .social > a:hover{
+            transform:rotate(360deg) scale(1.35);
+        }
+        
+        .social > a:nth-child(1):hover{
+            color:#0033ff;
+        }
+        .social > a:nth-child(2):hover{
+            color:#00FFFF;
+        }
+        .social > a:nth-child(3):hover{
+            color:#6600CC;
+        }
+        .box:hover .social{
+            opacity:1;
+        }
+        .box:hover .avatar img{
+            animation: rubberBand 1s ease;
+        }
+        @keyframes rubberBand {
+            from {
+                -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+            }
+            
+            30% {
+                -webkit-transform: scale3d(1.25, 0.75, 1);
+                transform: scale3d(1.25, 0.75, 1);
+            }
+            
+            40% {
+                -webkit-transform: scale3d(0.75, 1.25, 1);
+                transform: scale3d(0.75, 1.25, 1);
+            }
+            
+            50% {
+                -webkit-transform: scale3d(1.15, 0.85, 1);
+                transform: scale3d(1.15, 0.85, 1);
+            }
+            
+            65% {
+                -webkit-transform: scale3d(0.95, 1.05, 1);
+                transform: scale3d(0.95, 1.05, 1);
+            }
+            
+            75% {
+                -webkit-transform: scale3d(1.05, 0.95, 1);
+                transform: scale3d(1.05, 0.95, 1);
+            }
+            
+            to {
+                -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+            }
+        }
+        
+        @media (max-width:600px){
+            .logo{
+                height:175px;
+            }
+            .box{
+                width:calc(100%);
+            }
+        }
+        @media (min-width:601px){
+            .logo{
+                height:225px;
+            }
+            .box{
+                width:calc(100% / 2);
+            }
+        }
+        @media (min-width:992px){
+            .logo{
+                height:275px;
+            }
+            .box{
+                width:calc(100% / 3);
+            }
+        }
+        @media (min-width:1200px){
+            .logo{
+                height:375px;
+            }
+            .box{
+                width:calc(100% / 4);
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+</head>
+<body>
+    <div class="logo"></div>
+    <div class="container">
+        <div class="box">
+            <div class="avatar"><img src="https://i.imgur.com/z9c8v7Q.jpg" alt=""></div>
+            <div class="name">ZXDaikin</div>
+            <div class="title">CEO & Founder</div>
+            <div class="social">
+                
+                <a href="https://facebook.com/hakurei2001"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/zxdaikin"><i class="fab fa-twitter"></i></a>  
+                <a href="https://www.youtube.com/channel/UCNuzjD2XTmTYAkhlVnN6SdQ"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="avatar"><img src="https://i.imgur.com/RwZ8M5z.png" alt=""></div>
+            <div class="name">Nhan</div>
+            <div class="title">Owner</div>
+            <div class="social">
+                <a href="https://twitter.com/_nhan2k0"><i class="fab fa-twitter"></i></a>  
+                <a href="https://youtube.com/stepnhan"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="avatar"><img src="https://i.imgur.com/iBjIlDe.png" alt=""></div>
+            <div class="name">Akati</div>
+            <div class="title">Admin</div>
+        </div>
+        <div class="box">
+            <div class="avatar"><img src="https://i.imgur.com/RwZ8M5z.png" alt=""></div>
+            <div class="name">KleinMarquez</div>
+            <div class="title">Admin</div>
+            <div class="social">
+                <a href=""><i class="fab fa-twitter"></i></a>  
+                <a href=""><i class="fab fa-youtube"></i></a>
+                <a href=""><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+        <div class="box">
+                <div class="avatar"><img src="https://i.imgur.com/hcsgafq.png" alt=""></div>
+                <div class="name">Lumine (WhiteFox2018)</div>
+                <div class="title">Staff</div>
+                <div class="social">
+                    <a href="www.twitter.com/WhiteFox2018"><i class="fab fa-twitter"></i></a>  
+                    <a href=""><i class="fab fa-youtube"></i></a>
+                    <a href=""><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+    </div>
+    
+</body>
+</html>
