@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+        <title>Memory Card</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/js.js"></script>
+        
+    </head>
+    
+    <body>
+        <div id="snow"></div>
+        
+        <div id="wrap">
+            <div id="progress">
+                <progress max='100' value='100'></progress>
+            </div>
+            
+            <div id="content">
+                
+            </div>
+            
+        </div>
+        <div id="playMode">
+            <div class="dialog">
+                <h1>Memory Card</h1>
+                <h2 class="playMode">Choose play mode</h2>
+                <button id="btnHard" class="btnDialog" onclick="playMode(40)">Hard</button>
+                <button id="btnNormal" class="btnDialog" onclick="playMode(50)" > Normal</button>
+                
+                
+            </div>
+            
+        </div>
+        <div id="win">
+            <div class="dialog">
+                <img src="image/victory.png" alt="">
+                <h1>Win!</h1>
+                
+            </div>
+        </div>
+        <div id="lose">
+            <div class="dialog">
+                <img src="image/defeat.png" alt="">
+                <h1>Time Over, You Loss.</h1>
+                <button id="btnTimeOver" onclick="playAgain()" class="btnDialog">Play again!</button> 
+                
+            </div>
+            
+        </div>
+        <audio id="welcome-sound">
+            <source src="sound/Welcome Rift.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="music-sound">
+                <source src="sound/music.mp3" type="audio/mpeg">
+                </audio>
+                <audio id="correct-sound">
+                    <source src="sound/Correct.mp3" type="audio/mpeg">
+                    </audio>
+                    <audio id="wrong-sound">
+                        <source src="sound/Incorrect.mp3" type="audio/mpeg">
+                        </audio>
+                        <audio id="flip-sound">
+                            <source src="sound/Card Flip.mp3" type="audio/mpeg">
+                            </audio>
+                            <audio id="victory-sound">
+                                <source src="sound/Win.mp3" type="audio/mpeg">
+                                </audio>
+                                <audio id="lost-sound">
+                                    <source src="sound/Loss.mp3" type="audio/mpeg">
+                                    </audio>
+                                    
+                                    
+                                    
+                                    
+                                </body>
+                                
+                                </html>
