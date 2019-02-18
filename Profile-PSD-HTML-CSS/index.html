@@ -4,16 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    fab-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     <title>Profile</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <style>
-    .background{
-        background-image: url('img/Background.jpg');
-        background-size: cover;
-    }
+        *{
+            margin:0;
+        }
+        body{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            text-align: center;
+        }
+        .background{
+            background: center center no-repeat;
+        }
+        .box-center{
+            position: absolute;
+            top:300px;
+            left:0;
+            right:0;
+            margin:0 auto;
+            text-align: center;
+            width: 500px;
+            height: 650px;
+            background:#00aeef;
+            display: block;
+            border-radius:10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .avatar{
+            margin-top:50px;
+            display: inline-block;
+        }
+        .author{
+            margin:35px 0;
+            font-size: 40px;
+            line-height: 1em;
+        }
+        .list-icon{
+            margin: 0 auto;
+            width: 200px;
+            line-height: 9em;
+        }
+        .list-icon .icon{
+            text-decoration: none;
+            float: left;
+            margin: 0 10px;
+        }
+        .description{
+            font-size:18px;
+            font-weight: 300;
+        }
+        a{
+            color:white;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
-    <div class="background"></div>
+    <div class="container">
+        <img src="https://i.imgur.com/QFHRGlF.png" alt="" class="background">
+        <div class="box-center">
+            <a href="" class="avatar">
+                <img src="img/avatar.png" alt="">
+            </a>
+            <h2 class="author" style="color:white">
+                Đạt Lê
+            </h2>
+            <small class="description" style="color:white">
+                Chào mừng đến trang cá nhân của tôi
+            </small>
+            <p class="list-icon">
+                <a class="icon" href="https://www.facebook.com/Neppy2001">
+                    <i class="fab fa-facebook fa-3x"></i>
+                </a>
+                <a class="icon" href="discord.io/arkin">
+                    <i class="fab fa-discord fa-3x"></i>
+                </a>
+                <a class="icon" href="twitter.com/zxdaikin">
+                    <i class="fab fa-twitter fa-3x"></i>
+                </a>
+            </p>
+        </div>
+    </div>
 </body>
 </html>
