@@ -92,18 +92,25 @@
         translate(bai4[i]);
         
         /* Bài 5 */
-
-
-
-        /* Bài 6 */
-        function shownum(){
-            for (var i = 1; i<=100;i+2){
-                document.write("<span style='color:black'>"+i+" "+"</span>");
-                document.write("<span style='color:blue'>"+i+" "+"</span>");
+        for(var i=0;i<mang.length;i++){
+            if(mang[i]==true){
+                document.write("Giá trị True xuất hiện đầu tiên ở vị trí thứ: "+(i+1));
+                break;
             }
         }
-        shownum();
-        document.write("<br><br><br><br><br>");
-    </script>
+    }
+    check(bai5);
+    
+    
+    /* Bài 6 */
+    function shownum(){
+        for (var i = 1; i<=100;i+2){
+            document.write("<span style='color:black'>"+i+" "+"</span>");
+            document.write("<span style='color:blue'>"+i+" "+"</span>");
+        }
+    }
+    shownum();
+    document.write("<br><br><br><br><br>");
+</script>
 </body>
 </html>
