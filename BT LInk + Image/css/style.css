@@ -1,0 +1,48 @@
+img {
+	width: 300px;
+	border-radius: 2%;
+    border: 3px solid #fe0f4e;
+/*cho ảnh ra giữa*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+h2{
+	text-transform: capitalize;
+    color:#fe0f4e;
+    text-decoration: underline;
+}
+
+body {
+	width: 1000px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+h2, p {
+    margin-left: 50px;
+}
+
+.price-regular {
+    font-size: 14px;
+    color: #a2a2a2;
+    text-decoration: line-through;
+    font-weight: 300;
+ }
+
+ .final-price {
+ 	font-size: 17px;
+    color: #242424;
+    font-weight: 700;
+ }
+
+ .sale-tag {
+ 	color: #FF3B26;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+ }
+
+ 

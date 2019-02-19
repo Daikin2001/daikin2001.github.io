@@ -1,0 +1,27 @@
+img {
+	width: 500px;
+	border-radius: 2%;
+	border: 3px solid black;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+body {
+	width: 1000px;
+	margin-left: 50px;
+}
+
+p, li{
+	font-family: sans-serif;
+	text-align: justify;
+	margin-right: 50px;
+}
+
+h1 {
+	text-align: center;
+	font-style: italic;
+	font-weight: bold;
+	text-transform: capitalize;
+}
