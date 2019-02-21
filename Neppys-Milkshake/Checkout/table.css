@@ -47,8 +47,8 @@ h1{
 }
 
 .picture{
-    max-width: 17vw;
-
+    max-width: 150px;
+    max-height: 200px;
 }
 a{
     color: #8C031C;
