@@ -9,6 +9,7 @@
         document.write(month);
         document.write(year);
         document.write('<br/>');
+        Date();
         
         /* Bai 2 */
         
