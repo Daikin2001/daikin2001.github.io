@@ -65,9 +65,9 @@
         <table id="myTable">
             <thead>
                 <tr>
-                    <th id="name" onclick="sortTable(0)">Tên <img id="icon1" class="icon" src="img/sort-arrows-couple-pointing-up-and-down.png" alt=""></th>
-                    <th id="fb" onclick="sortTable(1)">Giá<img id="icon3" class="icon" src="img/sort-arrows-couple-pointing-up-and-down.png" alt=""></th>
-                    <th id="phone" onclick="sortTable(2)">Số lượng<img id="icon4" class="icon" src="img/sort-arrows-couple-pointing-up-and-down.png" alt=""></th>
+                    <th id="name">Tên</th>
+                    <th id="fb">Giá</th>
+                    <th id="phone">Số lượng</th>
                     <th>Ảnh</th>
                 </tr>
             </thead>
@@ -107,114 +107,7 @@
         <div class="footer text-center" zxdaikin-include-html="footer.html" style="position: relative;
         top: 30px;">© Copyright 2019 ZXDaikin</div>
     </footer>
-    <script>
-        var click = 0;
-        
-        function sortTable(n) {
-            var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-            table = document.getElementById("myTable");
-            switching = true;
-            dir = "asc";
-            
-            while (switching) {
-                
-                switching = false;
-                rows = table.rows;
-                
-                for (i = 1; i < (rows.length - 1); i++) {
-                    
-                    shouldSwitch = false;
-                    
-                    x = rows[i].getElementsByTagName("TD")[n];
-                    y = rows[i + 1].getElementsByTagName("TD")[n];
-                    
-                    if (dir == "asc") {
-                        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                            
-                            shouldSwitch = true;
-                            break;
-                        }
-                    } else if (dir == "desc") {
-                        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-                            
-                            shouldSwitch = true;
-                            break;
-                        }
-                    }
-                }
-                if (shouldSwitch) {
-                    
-                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-                    switching = true;
-                    
-                    switchcount ++;
-                } else {
-                    if (switchcount == 0 && dir == "asc") {
-                        dir = "desc";
-                        switching = true;
-                    }
-                }
-            }
-        }
-        
-    </script>
-    
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous">
-</script>
-
-<script>
-    $('#name').on("click",function () {
-        click++;
-        $('#icon2').attr('src',"img/sort-arrows-couple-pointing-up-and-down.png");
-        $('#icon3').attr('src',"img/sort-arrows-couple-pointing-up-and-down.png");
-        $('#icon4').attr('src',"img/sort-arrows-couple-pointing-up-and-down.png");
-        if(click%2 !==0){
-            $('#icon1').attr('src',"img/down.png")
-        }else{
-            $('#icon1').attr('src',"img/up.png")
-        }
-    });
-    
-    $('#gender').on("click",function () {
-        click++;
-        $('#icon1').attr('src',"img/sort-arrows-couple-pointing-up-and-down.png");
-        $('#icon3').attr('src',"img/sort-arrows-couple-pointing-up-and-down.png");
-        $('#icon4').attr('src',"img/sort-arrows-couple-pointing-up-and-down.png");
-        if(click%2 !==0){
-            $('#icon2').attr('src',"img/down.png")
-        }else{
-            $('#icon2').attr('src',"img/up.png")
-        }
-    });
-    
-    $('#fb').on("click",function () {
-        click++;
-        $('#icon2').attr('src',"img/sort-arrows-couple-pointing-up-and-down.png");
-        $('#icon1').attr('src',"img/sort-arrows-couple-pointing-up-and-down.png");
-        $('#icon4').attr('src',"img/sort-arrows-couple-pointing-up-and-down.png");
-        if(click%2 !==0){
-            $('#icon3').attr('src',"img/down.png")
-        }else{
-            $('#icon3').attr('src',"img/up.png")
-        }
-    });
-    
-    $('#phone').on("click",function () {
-        click++;
-        $('#icon2').attr('src',"img/sort-arrows-couple-pointing-up-and-down.png");
-        $('#icon3').attr('src',"img/sort-arrows-couple-pointing-up-and-down.png");
-        $('#icon1').attr('src',"img/sort-arrows-couple-pointing-up-and-down.png");
-        if(click%2 !==0){
-            $('#icon4').attr('src',"img/down.png")
-        }else{
-            $('#icon4').attr('src',"img/up.png")
-        }
-    })
-</script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
