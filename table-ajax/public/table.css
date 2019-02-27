@@ -1,13 +1,14 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-body{
+body {
     background: #B2AD98;
 }
 
-table, td{
+table,
+td {
     border: 1px solid grey;
     border-collapse: collapse;
     padding: 1vw;
@@ -16,11 +17,12 @@ table, td{
     background-color: #D6D1B8;
     color: #434144;
 }
-table{
+
+table {
     margin: auto;
 }
 
-th{
+th {
     border: 1px solid grey;
     padding: 1vw;
     width: 17vw;
@@ -29,27 +31,27 @@ th{
     cursor: pointer;
 }
 
-tr:hover td{
+tr:hover td {
     background: #434144;
     color: #D6D1B8;
 }
 
-
-.icon{
+.icon {
     position: relative;
     width: 1vw;
     left: 10%;
 }
-h1{
+
+h1 {
     margin: 2%;
     text-align: center;
     color: #434144;
 }
 
-.picture{
+.picture {
     max-width: 17vw;
-
 }
-a{
+
+a {
     color: #8C031C;
 }
