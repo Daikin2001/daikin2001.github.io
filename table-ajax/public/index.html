@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="table.css">
+</head>
+<body>
+    <h1>Bảng thông tin người dùng</h1>
+    <div id="wrap">
+        <table id="myTable">
+            <tr class="wrap">
+                
+            </tr>
+            <thead>
+            <tr>
+                <th id="name" onclick="sortTable(0)">Tên <img id="icon1" class="icon" src="img/sort-arrows-couple-pointing-up-and-down.png" alt=""></th>
+                <th id="gender" onclick="sortTable(1)">Giới tính <img id="icon2" class="icon" src="img/sort-arrows-couple-pointing-up-and-down.png" alt=""></th>
+                <th id="fb" onclick="sortTable(2)">Facebook<img id="icon3" class="icon" src="img/sort-arrows-couple-pointing-up-and-down.png" alt=""></th>
+                <th id="phone" onclick="sortTable(3)">Phone<img id="icon4" class="icon" src="img/sort-arrows-couple-pointing-up-and-down.png" alt=""></th>
+                <th id="delete" onclick="sortTable(3)">Action<img id="icon5" class="icon" src="img/sort-arrows-couple-pointing-up-and-down.png" alt=""></th>
+            </tr>
+            </thead>
+
+            <tbody>
+                
+            </tbody>
+            <tfoot>
+            </tfoot>
+            
+        </table>
+        
+    </div>
+    <button type="button" id="mybutton" onclick="createUser()">Thêm user tại đây</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

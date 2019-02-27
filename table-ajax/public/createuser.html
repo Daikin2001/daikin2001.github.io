@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create user</title>
+    <link rel="stylesheet" href="table.css">
+    <style>
+    .container{
+        margin:auto;
+        padding:0px;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Thêm người dùng</h2><br>
+        <input type="text" name="Tên" id="name" placeholder="Tên"><br>
+        <br>
+        <input type="text" name="Facebook" id="facebook" placeholder="Facebook"><br>
+        <br>
+        <input type="text" name="Điện thoại" id="phone" placeholder="Điện thoại"><br>
+        <br>
+        <label><input type="radio" name="gender" value="male">Nam</label>
+        <label><input type="radio" name="gender" value="female">Nữ</label>
+        <br><br>
+        <button type="button" id="mybutton" onclick="createUser()">Thêm user</button>        
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

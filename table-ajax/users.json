@@ -1,0 +1,21 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Mai Anh",
+            "gender": "Nữ",
+            "facebook": "facebook.com/Neppy2001",
+            "phone": "09123754332"
+            
+        },
+        {   
+            "id": 2,
+            "name": "Airi",
+            "gender": "Nữ",
+            "facebook": "facebook.com/Neppy2001",
+            "phone": "09123754332"
+            
+        }
+    ]
+    
+}
