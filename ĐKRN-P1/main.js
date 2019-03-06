@@ -20,6 +20,13 @@ document.write(tinhTong(3,5));
 document.write("<br>");
 
 function lapPhuong(a){
-    return a*a;
+    return a*a*a;
 }
 document.write(lapPhuong(5));
+document.write("<br>");
+
+function tinhTongBinhPhuongcua2So(a,b){
+    return (a*a)+(b*b)
+}
+document.write(tinhTongBinhPhuongcua2So(5,6));
+document.write("<br>");
