@@ -38,7 +38,12 @@ document.write(tongLapPhuong2so(5,6));
 document.write("<br>");
 
 function binhPhuongCuaTong2so(a,b){
-    return (a+b)*2;
+    return (a+b)*(a+b);
 }
 document.write(binhPhuongCuaTong2so(5,2));
+document.write("<br>");
+function lapPhuongCuaTong2so(a,b){
+    return (a+b)*(a+b)*(a+b);
+}
+document.write(lapPhuongCuaTong2so(5,2));
 document.write("<br>");
