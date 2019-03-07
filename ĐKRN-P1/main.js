@@ -47,3 +47,4 @@ function lapPhuongCuaTong2so(a,b){
 }
 document.write(lapPhuongCuaTong2so(5,2));
 document.write("<br>");
+
