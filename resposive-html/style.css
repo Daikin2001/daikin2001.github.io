@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+body{ margin:0px; padding:0;}
+.wrap{
+    max-width: 100%;
+    margin:0 auto;
+    width: 60%;
+    padding:30px;
+}
+#img{
+    padding: 20px 20px;
+    margin: 0 auto;
+}
+.item1 .item2{
+    display:flex;
+    color:blue;
+    height: 90px;
+    width: 30px;
+}
+@media all and (max-width: 992px) {
+    .wrap{
+        float: none; 
+        width: 100%;
+        padding:30px;
+    }
+    #img{
+        padding: 20px 20px;
+        margin: 0 auto;
+    }
+}
