@@ -5,7 +5,7 @@
     background-color: black;
     font-family: Helvetica, sans-serif;
 }
-p,h2{
+p,h2,h1{
     color:white;
 }
 .wrap{
@@ -23,4 +23,11 @@ footer{
     text-align: center;
     background: white top center no-repeat;
     margin-top: 50px;
+}
+.mganga .valhein .thane .lubu .quillen .hayate{
+    width: 1000px;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
 }
