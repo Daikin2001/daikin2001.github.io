@@ -29,5 +29,5 @@ body{
     transition:transform 2s;
 }
 .container .box:hover .imgBox img .zoom:hover{
-    transform: scale(1.5);
+    transform: scale(2.0);
 }
