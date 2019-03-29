@@ -8,7 +8,7 @@ body{
   margin:360px;
 }
 .button {
-  background-color: green;
+  background-color: #4083b2;
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -22,5 +22,6 @@ body{
 
 .button:hover {
   padding-right: 25px;
+  background-color: #15ab74;
   border-radius: 50px;
 }
