@@ -16,6 +16,7 @@ body{
   padding: 1rem 2rem;
   width: 200px;
   cursor: pointer;
+  transition: all 0.5s;
   margin: 5px;
 }
 
