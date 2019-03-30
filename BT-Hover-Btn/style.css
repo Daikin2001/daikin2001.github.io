@@ -21,7 +21,6 @@ body{
 }
 
 .button:hover {
-  padding: 25px;
   background-color: #15ab74;
-  border-radius: 50px;
+  border-radius: 25px;
 }
