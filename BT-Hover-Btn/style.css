@@ -1,7 +1,7 @@
 body{
   margin:0;
   padding:0;
-  font-family: 'Segoe UI',sans-serif
+  font-family: 'Segoe UI',sans-serif;
 }
 .container{
   text-align: center;
@@ -15,7 +15,6 @@ body{
   font-size: 28px;
   padding: 1rem 2rem;
   width: 200px;
-  transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
 }
