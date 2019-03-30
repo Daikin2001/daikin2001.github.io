@@ -7,9 +7,9 @@ body{
 .container{
     width: 1280px;
     margin:70px auto 0;
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto auto auto;
 }
 .container .box{
     position: relative;
