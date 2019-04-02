@@ -169,7 +169,7 @@ a{text-decoration: none}
 	position: absolute;
 	display: none;
 	padding: 10px;
-	top: 8rem;
+	top: 4rem;
 	left: 300px;
 }
 
@@ -198,7 +198,7 @@ li:hover ul{
 	position: absolute;
 	display: none;
 	padding: 10px;
-	top: 8rem;
+	top: 4rem;
 	left: 420px;
 }
 .nav-small3{
@@ -207,7 +207,7 @@ li:hover ul{
 	position: absolute;
 	display: none;
 	padding: 10px;
-	top: 8rem;
+	top: 4rem;
 	left: 505px;
 }
 .nav-small4{
@@ -216,7 +216,7 @@ li:hover ul{
 	position: absolute;
 	display: none;
 	padding: 10px;
-	top: 8rem;
+	top: 4rem;
 	left: 588px;
 }
 .nav-small5{
@@ -225,7 +225,7 @@ li:hover ul{
 	position: absolute;
 	display: none;
 	padding: 10px;
-	top: 8rem;
+	top: 4rem;
 	left: 660px;
 }
 .nav-small6{
@@ -234,7 +234,7 @@ li:hover ul{
 	position: absolute;
 	display: none;
 	padding: 10px;
-	top: 8rem;
+	top: 4rem;
 	left: 743px;
 }
 td:hover{
