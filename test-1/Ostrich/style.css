@@ -1,0 +1,41 @@
+body{
+    padding:0;
+    box-sizing: border-box;
+    margin:0;
+    font-family: 'Arial', sans-serif;
+}
+.info img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.paragraph{
+    margin:auto;
+    padding:20px;
+}
+.button {
+    background-color: dodgerblue;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 1rem 2rem;
+    width: 200px;
+    cursor: pointer;
+    transition: all 0.5s;
+    margin: 5px;
+}
+
+.button:hover {
+    background-color: #15ab74;
+    border-radius: 25px;
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    float: left;
+    left: 100vh;
+}
