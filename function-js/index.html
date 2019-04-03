@@ -20,7 +20,6 @@
         function squareThreeNumber(a, b, c) {
             return square(3*a + 2*b - c)
         }
-        
         document.write(squareThreeNumber(2,4,6));
         document.write("<br/>");
         function splitString(str) {
@@ -30,30 +29,32 @@
             
             var newString = '';
             newString = str.substring(0,10);
-            return newString;
-            
             newString= newString + "...";
-            return newString
         }
         document.write(splitString("Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit voluptate fuga quod ipsam eligendi architecto, quidem enim autem nostrum facilis error corrupti saepe hic reiciendis sequi expedita sit dolor consectetur."));
         document.write("<br/>");
         
-        function uppercaseFirstLetter(str) {
+        function Capitalize(str) {
             if(typeof str !='string'){
                 return "Không phải là chuỗi";
             }
-            
             //tách 2 chuỗi
             var stringFirst = '';
             var stringSecond = '';
-            
             stringFirst = str.charAt(0).toUpperCase();
-            return stringFirst;
-            
             stringSecond = str.slice(1).toLowerCase();
             return stringFirst+stringSecond;
         }
-        document.write(uppercaseFirstLetter("welcome to ZXArkin"));
+        document.write(Capitalize("welcome to ZXArkin"));
+        document.write("<br/>");
+        function sortArray(arr) {
+			//var minArray;
+			//minArray=Math.min.apply(Math,arr);
+			arr = arr.sort(function(a, b){return a-b});
+			return arr[0];
+		}
+        document.write(sortArray(300,222,555,777));
+        document.write("<br/>");
     </script>
 </body>
 </html>
