@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+        // Bình phương một số
+        function square(number) {
+            if (typeof number != "number"){
+                return "Không phải là số";
+            }
+            return number*number
+        }
+        document.write(square(5));
+        document.write("<br/>");
+        function squareThreeNumber(a, b, c) {
+            return square(3*a + 2*b - c)
+        }
+        
+        document.write(squareThreeNumber(2,4,6));
+        document.write("<br/>");
+        function splitString(str) {
+            if (typeof str != 'string' || str.length <30){
+                return "Không phải chuỗi dài hơn 30 ký tự"
+            }
+            
+            var newString = '';
+            newString = str.substring(0,10);
+            return newString;
+            
+            newString= newString + "...";
+            return newString
+        }
+        document.write(splitString("Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit voluptate fuga quod ipsam eligendi architecto, quidem enim autem nostrum facilis error corrupti saepe hic reiciendis sequi expedita sit dolor consectetur."));
+        document.write("<br/>");
+        
+        function uppercaseFirstLetter(str) {
+            if(typeof str !='string'){
+                return "Không phải là chuỗi";
+            }
+            
+            //tách 2 chuỗi
+            var stringFirst = '';
+            var stringSecond = '';
+            
+            stringFirst = str.charAt(0).toUpperCase();
+            return stringFirst;
+            
+            stringSecond = str.slice(1).toLowerCase();
+            return stringFirst+stringSecond;
+        }
+        document.write(uppercaseFirstLetter("welcome to ZXArkin"));
+    </script>
+</body>
+</html>
