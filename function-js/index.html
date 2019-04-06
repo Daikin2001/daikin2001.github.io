@@ -17,23 +17,12 @@
         }
         document.write(square(5));
         document.write("<br/>");
-        function squareThreeNumber(a, b, c) {
-            return square(3*a + 2*b - c)
+        // Bài 2 (Update 2019)
+        function centuryFromYear(year) {
+            Math.ceil(year / 100);
         }
-        document.write(squareThreeNumber(2,4,6));
-        document.write("<br/>");
-        function splitString(str) {
-            if (typeof str != 'string' || str.length <30){
-                return "Không phải chuỗi dài hơn 30 ký tự"
-            }
-            
-            var newString = '';
-            newString = str.substring(0,10);
-            newString= newString + "...";
-        }
-        document.write(splitString("Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit voluptate fuga quod ipsam eligendi architecto, quidem enim autem nostrum facilis error corrupti saepe hic reiciendis sequi expedita sit dolor consectetur."));
-        document.write("<br/>");
-        
+        document.write(centuryFromYear("2009"));
+        document.write("<br/>")
         function Capitalize(str) {
             if(typeof str !='string'){
                 return "Không phải là chuỗi";
@@ -48,11 +37,11 @@
         document.write(Capitalize("welcome to ZXArkin"));
         document.write("<br/>");
         function sortArray(arr) {
-			//var minArray;
-			//minArray=Math.min.apply(Math,arr);
-			arr = arr.sort(function(a, b){return a-b});
-			return arr[0];
-		}
+            //var minArray;
+            //minArray=Math.min.apply(Math,arr);
+            arr = arr.sort(function(a, b){return a-b});
+            return arr[0];
+        }
         document.write(sortArray(300,222,555,777));
         document.write("<br/>");
     </script>
