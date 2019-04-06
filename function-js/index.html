@@ -41,6 +41,7 @@
         };
         document.write(centuryFromYear("2009"));
         document.write("<br/>")
+        
         function Capitalize(str) {
             if(typeof str !='string'){
                 return "Không phải là chuỗi";
@@ -54,6 +55,7 @@
         }
         document.write(Capitalize("welcome to ZXArkin"));
         document.write("<br/>");
+        
         function sortArray(arr) {
             //var minArray;
             //minArray=Math.min.apply(Math,arr);
@@ -62,6 +64,73 @@
         }
         document.write(sortArray(300,222,555,777));
         document.write("<br/>");
+        
+        function splitString(str) {
+            if (typeof str != 'string' || str.length <30){
+                return "Không phải chuỗi dài hơn 30 ký tự"
+            }
+            
+            var newString = '';
+            newString = str.substring(0,10);
+            return newString;
+            
+            newString= newString + "...";
+            return newString;
+        }
+        document.write(splitString("Đạt Lê, 18 tuổi abcdef"));
+        document.write("<br/>");
+        //Bài 5:
+        function sortArray(arr) {
+            //var minArray;
+            //minArray=Math.min.apply(Math,arr);
+            arr = arr.sort(function(a, b){return a-b});
+            return arr[0];
+        }
+        
+        //Bài 6:
+        function sortStudents(arr) {
+            //console.log(arr.sort);
+            console.log(arr.sort());
+            return arr.sort();
+        }
+        
+        sortStudents(["Dat","Thai","Binh","Hao","Oanh"]);
+        
+        //Bài 7 (end):
+        // Khoi tao 3 doi tuong
+        var teacher = {
+            firstName: "Phan",
+            lastName: "Hao",
+            age: 899,
+            say: function(){
+            }
+        }
+        var student = {
+            firstName: "Dat",
+            lastName: "Le",
+            age: 17,
+            say: function(){
+            }
+        }
+        
+        var parent = {
+            firstName: "Huyen",
+            lastName: "Trang",
+            age: 42,
+            say: function(){
+            }
+        }
+        
+        var aboutMe = function(){
+            console.log(this);
+            document.write("Day la " + this.firstName + " " + this.lastName );
+            return "Day la " + this.firstName + " " + this.lastName;
+        }
+        teacher.say = aboutMe;
+        student.say = aboutMe;
+        parent.say = aboutMe;
+        console.log(student.say());
+        
     </script>
 </body>
 </html>
