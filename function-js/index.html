@@ -19,8 +19,26 @@
         document.write("<br/>");
         // Bài 2 (Update 2019)
         function centuryFromYear(year) {
-            Math.ceil(year / 100);
-        }
+            var newYear = year.toString().length;
+            var stYear
+            if (newYear >= 4){
+                stYear = year.toString().substring(0, 2);
+                if (year % 100 !== 0){ 
+                    return (parseInt(stYear)+1);
+                } else {
+                    return parseInt(stYear);  
+                };
+            } else if (newYear >= 3){
+                stYear = year.toString().substring(0,1);
+                if (year % 100 !== 0){ 
+                    return (parseInt(stYear)+1);
+                } else {
+                    return parseInt(stYear);  
+                };
+            } else if (newYear < 3){
+                return 1;
+            };
+        };
         document.write(centuryFromYear("2009"));
         document.write("<br/>")
         function Capitalize(str) {
