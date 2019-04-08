@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bài Tập JS</title>
+    <style>
+    body{
+        font-family: 'Arial', sans-serif;
+        padding:0;
+        margin:0;
+    }
+    </style>
+</head>
+<body>
+    <h1>Welkome!</h1>
+    <h2>Click this!</h2>
+    <button onclick="hello()">Chào tôi đi</button>
+    <br>
+    <script>
+        function hello(str){
+            alert("Xin chào " + str);
+        }
+        document.write("<br>");
+        function hello(){
+            alert("Xin chào các bạn");
+        }
+        document.write("<br>");
+        function yearCentury(year){
+            return Math.floor((year - 1) / 100) + 1;
+        }
+        document.write("Đây là Thế kỉ " + yearCentury(2009));
+        document.write("<br>");
+        function tong2so(a,b){
+            return a + b;
+        }
+        function binhPhuong(a){
+            return a*2;
+        }
+    </script>
+</body>
+</html>
