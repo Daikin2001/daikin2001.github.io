@@ -9,40 +9,45 @@
   <title>Document</title>
 </head>
 <body>
-  <div id="myDIV">
-    <p>First p element in div.</p>
-    <p>Another p element in div.</p>
-    <p>A third p element in div.</p>
-  </div>
-  <p id="demo"></p>
+  
   <script>
     // Bài 1
-    function largestOfFour(arr) {
-      var largestNumber = [0,0,0,0];
-      for(var arrayIndex = 0; arrayIndex < arr.length; arrayIndex++) {
-        for(var subArrayIndex = 0; subArrayIndex < arr[arrayIndex].length; subArrayIndex++) {
-          if(arr[arrayIndex][subArrayIndex] > largestNumber[arrayIndex]) {         
-            largestNumber[arrayIndex] = arr[arrayIndex][subArrayIndex];
+    // Hint: sort()
+    function bai1(arr) {
+      // Check ĐK
+      if (!Array.isArray(arr)) {
+        return "Khong phai la mang";
+      } else {
+        // Kiem tra tiep phan tu cua mang co phai la so hay ko?
+        for (var i = 0; i < arr.length; i++) {
+          if (typeof arr[i] != "number") {
+            return "Phan tu cua mang khong phai la so";
+          }
+          if (arr[i] % 2 == 0) {
+            res.push(arr[i]);
           }
         }
       }
-      return largestNumber;
+      return res.sort(function(a, b) {
+        return b - a;
+      });
     }
     
     // Bài 2
-    function findLongestWord(str) {
-      var strSplit = str.split(' ');
-      var longestWord = 0;
-      for(var i = 0; i < strSplit.length; i++){
-        if(strSplit[i].length > longestWord){
-          longestWord = strSplit[i].length;
+    // Hint: For.lengh
+    var bai2 = function(a) {
+      for (var i = 0; i < a.length; i++) {
+        a[i] = String(a[i]);
+        if (a[i] == "true") {
+          document.write(
+          "<p>Giá trị true xuất hiện lần đầu tiên tại phần tử thứ :" + i + "</p>"
+          );
+          break;
         }
       }
-      return longestWord;
-    }
-    console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
-    
+    };
     // Bài 3
+    // Hint: Có sẵn hàm
     function confirmEnding (str, target) {
       return str.substr(-(target.length)) === target;
     }
@@ -74,14 +79,15 @@
       
       return indexOf.call(this, needle) > -1;
     };
-
+    
     // Bài 5
-    function numberTagsHTML() {
-      var div = document.getElementById("myDIV");
-      var nodelist = div.getElementsByTagName("P");
-      document.getElementById("demo").innerHTML = nodelist.length;
-    }
-    numberTagsHTML();
-  </script>
-</body>
-</html>
+    // HINT: DOM
+    function bai5(){
+      var str = "dsfafsadfasdfdsfsadfasdfsa";
+      var tag = "<h2>";
+        
+      }
+    </script>
+  </body>
+  </html>
+  
