@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1.0"
-        name="viewport">
+  name="viewport">
   <meta content="ie=edge"
-        http-equiv="X-UA-Compatible">
+  http-equiv="X-UA-Compatible">
   <title>Document</title>
 </head>
 <body>
@@ -15,41 +15,64 @@
     <p>A third p element in div.</p>
   </div>
   <script>
-        // Bài 1
-        function greatestNum(){
-            var num = ['1','2','3','4'];
-            var numLength = num.length('2');
+    // Bài 1
+    function greatestNum(){
+      var num = ['1','2','3','4'];
+      var numLength = num.length();
+    }
+    
+    // Bài 2
+    function findLongestWord(str) {
+      var strSplit = str.split(' ');
+      var longestWord = 0;
+      for(var i = 0; i < strSplit.length; i++){
+        if(strSplit[i].length > longestWord){
+          longestWord = strSplit[i].length;
         }
-        
-        // Bài 2
-        function findLongestWord(str) {
-            var strSplit = str.split(' ');
-            var longestWord = 0;
-            for(var i = 0; i < strSplit.length; i++){
-                if(strSplit[i].length > longestWord){
-                    longestWord = strSplit[i].length;
-                }
+      }
+      return longestWord;
+    }
+    findLongestWord("The quick brown fox jumped over the lazy dog");
+    
+    // Bài 3
+    function confirmEnding (str, target) {
+      return str.substr(-(target.length)) === target;
+    }
+    confirmEnding("Đạt", "n");
+    // Bài 4
+    var contains = function(needle) {
+      // Per spec, the way to identify NaN is that it is not equal to itself
+      var findNaN = needle !== needle;
+      var indexOf;
+      
+      if(!findNaN && typeof Array.prototype.indexOf === 'function') {
+        indexOf = Array.prototype.indexOf;
+      } else {
+        indexOf = function(needle) {
+          var i = -1, index = -1;
+          
+          for(i = 0; i < this.length; i++) {
+            var item = this[i];
+            
+            if((findNaN && item !== item) || item === needle) {
+              index = i;
+              break;
             }
-            return longestWord;
-        }
-        findLongestWord("The quick brown fox jumped over the lazy dog");
-        
-        // Bài 3
-        function confirmEnding (str, target) {
-            return str.substr(-(target.length)) === target;
-        }
-        confirmEnding("Đạt", "n");
-        // Bài 4
-        var myArray = [0,1,2],
-        needle = 1,
-        index = contains.call(myArray, needle); // true
-        // Bài 5
-        function numberTagsHTML() {
-            var div = document.getElementById("myDIV");
-            var nodelist = div.getElementsByTagName("P");
-            document.getElementById("demo").innerHTML = nodelist.length;
-        }
-        numberTagsHTML();
+          }
+          
+          return index;
+        };
+      }
+      
+      return indexOf.call(this, needle) > -1;
+    };
+    // Bài 5
+    function numberTagsHTML() {
+      var div = document.getElementById("myDIV");
+      var nodelist = div.getElementsByTagName("P");
+      document.getElementById("demo").innerHTML = nodelist.length;
+    }
+    numberTagsHTML();
   </script>
 </body>
 </html>
