@@ -1,0 +1,210 @@
+<html >
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	
+	
+	<style type="text/css">
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+			font-size: 25px;
+			font-weight: 100;
+			font-family: sans-serif;
+		}
+		body {
+			background: linear-gradient(to bottom, rgb(45,175,217) 0%,rgb(40,148,152) 100%);
+		}
+		div {
+			width: 500px;
+			margin:100px auto 0 auto;
+			height: 625px;
+			box-shadow:0px 0px 20px 0px rgba(50, 50, 50, 0.5);
+		}
+		p {
+			width: 100%;
+			border: none;
+			color: white;
+			padding-right: 5px;
+			letter-spacing: 3px;
+			height: 125px;
+			background: black;
+			font-size: 35px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		button {
+			width: 100px;
+			height: 100px;
+			background: #A6A6A6;
+			border: 1px solid #000;
+			float: left;
+			cursor: pointer;
+			color: white;
+		}
+		.result {
+			background: orange;
+			font-size: 40px;
+			border: 1px solid #000;
+			width: 200px;
+			float: right;
+			color: white;
+		}
+		.num {
+			color: white;
+		}
+		.ope {
+			font-size:40px;
+		}
+		.o {
+			width: 200px;
+		}
+		button:active {	
+			background:#165569; 
+		}
+		button:focus{	
+			outline:none; 
+		}
+		
+	</style>
+	
+	
+</head>		
+
+<body>
+	
+	<div>
+		<p type='text' id="kq"></p>
+		<button onclick="c()">C</button>
+		<button onclick="back()">←</button>
+		<button onclick="butSwitch()">+/−</button>
+		<button onclick="butSquare()">x²</button>
+		<button onclick="fact()">x!</button>
+		<button onclick="press(this)" class="num">7</button>
+		<button onclick="press(this)" class="num">8</button>
+		<button onclick="press(this)" class="num">9</button>
+		<button onclick="percent()">%</button>
+		<button onclick="sqrt()">√</button>
+		<button onclick="press(this)" class="num">4</button>
+		<button onclick="press(this)" class="num">5</button>
+		<button onclick="press(this)" class="num">6</button>
+		<button onclick="press(this)" class="ope">+</button>
+		<button onclick="press(this)" class="ope">-</button>
+		<button onclick="press(this)" class="num">1</button>
+		<button onclick="press(this)" class="num">2</button>
+		<button onclick="press(this)" class="num">3</button>
+		<button onclick="press(this)" class="ope">×</button>
+		<button onclick="press(this)" class="ope">÷</button>
+		<button onclick="press(this)" class="num o">0</button>
+		<button onclick="butDot()">.</button>
+		<button onclick="result()" class="result">=</button>
+	</div>
+	
+	
+	
+	<script>
+		
+		var lastChar = '';
+		var dot = true ;
+		var operation = ['+','-','×','÷'];
+		
+		
+		
+		function press(button){	
+			if (operation.indexOf(button.innerText) > -1 ) {
+				if (kq.innerText.length == 20 || kq.innerText == 'NaN' || kq.innerText == 'Infinity') {
+					alert('NHẬP VỪA THÔI , TROLL NHAU À !')
+				}
+				else if (operation.indexOf(lastChar) == -1 && lastChar != ''){
+					kq.innerText += button.innerText ;
+					lastChar = button.innerText;
+					dot = true;
+				}
+				else if (lastChar == ''){
+					kq.innerText = '' ;
+				}
+				else {
+					kq.innerText = kq.innerText.substr(0,kq.innerText.length-1);
+					kq.innerText += button.innerText ;
+					lastChar = button.innerText;
+				}
+			}
+			else if (kq.innerText + button.innerText == 0) {
+				kq.innerText = '' 
+			}
+			else if (kq.innerText.length == 20 || kq.innerText == 'NaN' || kq.innerText == 'Infinity') {
+				alert('NHẬP VỪA THÔI , TROLL NHAU À !');
+			}
+			else {
+				kq.innerText += button.innerText ;
+				lastChar = button.innerText;
+			}	
+		}
+		
+		function butDot(){
+			if (kq.innerText.length == 20 || kq.innerText == 'NaN' || kq.innerText == 'Infinity') {
+				kq.innerText = kq.innerText ;
+			}
+			else if (lastChar != '' && lastChar != '.' && dot == true && Number(lastChar)>=0 ){
+				kq.innerText += '.' ;
+				lastChar = '.';
+				dot = false ;
+			}
+			else { kq.innerText = kq.innerText ;}	
+		}
+		
+		function c(){
+			kq.innerText = lastChar = '' ;
+			dot = true ;
+		}
+		
+		function back() {
+			kq.innerText = kq.innerText.substr(0,kq.innerText.length-1);
+		}
+		
+		function butSwitch() {
+			kq.innerText = kq.innerText*(-1);
+		}
+		
+		function butSquare() {
+			kq.innerText = Math.pow(kq.innerText,2);
+			var n = parseFloat(kq.innerText) ;
+		}
+		
+		function percent() {
+			kq.innerText = kq.innerText/100 ;
+		}
+		
+		function fact() {
+			if (kq.innerText.length == 20 || kq.innerText == 'NaN' || kq.innerText == 'Infinity') {
+				kq.innerText = kq.innerText ;
+			}
+			else {
+				var x = Number(kq.innerText) ;
+				var n = 1;
+				for (var i = 1 ; i<=x ; i++) {
+					n = i * n ; 
+				}
+				kq.innerText = n;
+			}
+		}
+		function sqrt() {
+			kq.innerText = Math.sqrt(kq.innerText);
+			var n = parseFloat(kq.innerText) ;
+		}
+		
+		function result(){	
+			kq.innerText = kq.innerText.replace(/×/g, '*').replace(/÷/g, '/');  
+			kq.innerText = eval(kq.innerText) ;
+		}
+		
+		
+		
+	</script>
+	
+	
+</body>			
+</html>
+
