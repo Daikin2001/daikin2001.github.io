@@ -8,6 +8,6 @@ CNAME is already in Daikin Devoloperment Team website.
 
 [Twitter](https://twitter.com/ZXArkin)
 
-[ZXDaikin YT Official](https://www.youtube.com/channel/UCNuzjD2XTmTYAkhlVnN6SdQ)
+[ZXArkin YT Official](https://www.youtube.com/channel/UCNuzjD2XTmTYAkhlVnN6SdQ)
 
 ## This site framework based in Bulma CSS.
