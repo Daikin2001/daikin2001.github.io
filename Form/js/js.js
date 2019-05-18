@@ -18,4 +18,4 @@ var register = {
     mobileNumber:dataForm[4],
     birthday:dataForm[5]+' - '+dataForm[6]+' - '+dataForm[7],
     sex:dataForm[8]
-}
+};
