@@ -1,142 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Đăng ký thông tin</title>
     <link rel="stylesheet" href="css/css.css">
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
-    <div id="wrap">
-        <div id="menu">
-            
-            <div id="content">
-                <div id="left">
-                    <div>
-                    </div>
-                </div>
-                <div id="right">
-                    <div class="content">
-                        <h1>Đăng ký tài khoản</h1>
-                    </div>
-                    <div id="form-register">
-                        <form action="registed.html" name="register" method="get" >
-                            <!-- <div class="full-name width-div">
-                                <div class="f-name first-name">
-                                    <input type="text" class="heightInput" name="first-name" id="first-name" placeholder="First name">
-                                    
-                                </div>
-                                <div class="f-name surname">
-                                    <input type="text" class="heightInput" name="surname" id="surname" placeholder="Surname">
-                                    
-                                </div>
-                                
-                            </div> -->
-                            <div class="full-name width-div error">
-                                <input type="text" class="heightInput width-ip" name="full-name" id="full-name" placeholder="User name">
-                                <div class="test2">
-                                    <span class="error1"></span>
-                                    
-                                </div>
-                                <div class="err">
-                                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                                </div>
-                                
-                            </div>
-                            
-                            <div class="email width-div error">
-                                <input type="text" class="heightInput width-ip" name="email" id="email" placeholder="Email">
-                                <div class="test2">
-                                    <span class="error1"></span>
-                                    
-                                </div>
-                                <div class="err">
-                                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="new-password width-div error" >
-                                <input type="password" class="heightInput width-ip" name="new-password" id="new-password" placeholder="New password">
-                                <div class="test2">
-                                    <span class="error1"></span>
-                                    
-                                </div>
-                                <div class="err">
-                                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="mobile-number width-div error">
-                                <input type="text" class="heightInput width-ip" name="mobile-number" id="mobile-number" placeholder="Mobile number">
-                                <div class="test2">
-                                    <span class="error1"></span>
-                                    
-                                </div>
-                                <div class="err">
-                                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="birthday width-div error">
-                                <div>
-                                    Birthday
-                                    <br/>
-                                    <select class="birthday" name="day" id="day-birthday">
-                                        <option selected="1" value="">Day</option>
-                                    </select>
-                                    <select class="birthday" name="month" id="month-birthday">
-                                        <option selected="1" value="">Month</option>
-                                        
-                                    </select>
-                                    <select class="birthday" name="year" id="year-birthday">
-                                        <option selected="1" value="">Year</option>
-                                        
-                                    </select>
-                                </div>
-                                
-                                <div class="test2">
-                                    <span class="error1"></span>
-                                    
-                                </div>
-                                <div class="err">
-                                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="sex error" id="sex" >
-                                <div class="sex-div">
-                                    <span class="female">
-                                        <input type="radio" onclick="check()" value="female" class="sex" name="sex" id="female">
-                                        <label class="sex" for="female">Female</label>
-                                    </span>
-                                    <span class="male">
-                                        <input type="radio" onclick="check()" value='male' class="sex" name="sex" id="male">
-                                        <label class="sex" for="male">Male</label>
-                                    </span>
-                                </div>               
-                                
-                                <div class="test2">
-                                    <span class="error1"></span>
-                                    
-                                </div>
-                                
-                                <div class="err">
-                                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="clear"></div>
-                            <div class="test1">
-                                <input class="heightInput submitA"  type="submit" value="Create Account">
-                                
-                            </div>
-                            
-                            
-                        </form>
-                    </div>
-                </div>
+    <div class="signup-form">
+        <form action="registed.html" method="post">
+            <h2>Sign Up</h2>
+            <p>It's free and only takes a minute.</p>
+            <hr>
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" class="form-control" name="username" required="required">
             </div>
-            
-        </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="js/js.js"></script>
-    </body>
-    
-    </html>
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" class="form-control" name="email" required="required">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" name="password" required="required">
+            </div>
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" class="form-control" name="confirm_password" required="required">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block btn-lg">Sign Up</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/js.js"></script>
+</body>
+
+</html>
