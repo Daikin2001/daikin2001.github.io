@@ -14,8 +14,5 @@ var register = {
     userName:dataForm[0],        
     email:dataForm[1],        
     pass:dataForm[2],
-    facebook:dataForm[3],
-    mobileNumber:dataForm[4],
-    birthday:dataForm[5]+' - '+dataForm[6]+' - '+dataForm[7],
-    sex:dataForm[8]
+    confirmpassword:dataForm[3]
 };
