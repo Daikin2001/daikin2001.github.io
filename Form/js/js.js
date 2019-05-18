@@ -25,7 +25,7 @@ for (var i=0;i<parameters.length;i++){
     var temp;
     temp=parameters[i].slice(index+1);
     // dataForm[i]=temp.replace(/+/g,"*");
-    dataForm[i]=decodeURIComponent(window.location.href);
+    dataForm[i]=decodeURIComponent(temp.split('+').join(' '));
 }
 var register = {
     userName:dataForm[0],        
