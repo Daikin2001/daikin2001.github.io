@@ -25,9 +25,7 @@ for (var i=0;i<parameters.length;i++){
     var temp;
     temp=parameters[i].slice(index+1);
     // dataForm[i]=temp.replace(/+/g,"*");
-    dataForm[i]=decodeURIComponent(temp.split('+').join(' '));
-    
-    
+    dataForm[i]=decodeURIComponent(window.location.href);
 }
 var register = {
     userName:dataForm[0],        
@@ -159,6 +157,4 @@ $('#form-register').on('submit',function(){
     return isValid;
     
     
-})
-
-
+});
