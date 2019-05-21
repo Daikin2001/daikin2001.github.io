@@ -42,3 +42,22 @@ $(document).ready(function() {
         }
     });
 });
+$('#formRegister').on('submit',function(){
+    var isVaild = true;
+    
+    if($('#name').val().trim() == ''){
+        $('#name').next('span').text('Name is empty');
+        isVaild = false;
+    } else {
+        $('#name').next('span').text('');
+    }
+    
+    if ($('#email').val().match(/	
+        ^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/) == null){
+        $('#email').next('span').text('Email is invaid!');
+        isVaild = false;
+    } else{
+        $('#email').next('span').text('');
+    }
+    return isVaild;
+});
