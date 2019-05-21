@@ -1,63 +1,92 @@
-//page registed.html
-var parameters;
-var dataForm=[];
-parameters = location.search.substring(1).split("&");
+/*
+Validate mật khẩu: Dài hơn 8 ký tự, phải có lớn hơn 1 chữ Hoa, phải có số, không có các ký tự đặc biệt
+*/
 
-for (var i=0;i<parameters.length;i++){
-    var index= parameters[i].indexOf('=');       
-    var temp;
-    temp=parameters[i].slice(index+1);
-    // dataForm[i]=temp.replace(/+/g,"*");
-    dataForm[i]=decodeURIComponent(temp.split('+').join(' '));
+// Khai báo các đối tượng đại diện cho element thông báo invalid
+function InvalidElement() {
+    this.bind = function(elementID) {
+        this.element = document.getElementById(elementID);
+        console.assert(this.element, `fail to bind element width ID "${elementID}"`);
+    }
+    this.show = function(str) {
+        this.element.removeAttribute("hidden");
+        this.element.innerHTML = str;
+    }
+    this.hide = function() {
+        this.element.setAttribute("hidden", "")
+    }
 }
-var register = {
-    userName:dataForm[0],        
-    email:dataForm[1],        
-    pass:dataForm[2],
-};
 
-// const URL = decodeURIComponent(window.location.href);
-// const data=[];
 
-// for (let i = 0; i < data.length; i++) {
-//     data[i] = data[i].split('=');
-//     data[i][0] = '<b>' + data[i][0] + '</b>';
-// }
 
-$(document).ready(function() {
-    
-    //Khi bàn phím được nhấn và thả ra thì sẽ chạy phương thức này
-    $("#formRegister").validate({
-        rules: {
-            username: "required",
-            email: "required",
-            password: "required",
-            confirm_password: "required"
-        },
-        messages: {
-            username: "Please enter username",
-            email: "Please enter email",
-            password: "Please enter password",
-            confirm_password: "Please enter confirm password"
-        }
-    });
-});
-$('#formRegister').on('submit',function(){
-    var isVaild = true;
-    
-    if($('#name').val().trim() == ''){
-        $('#name').next('span').text('Name is empty');
-        isVaild = false;
-    } else {
-        $('#name').next('span').text('');
+let elemInvalidPassword = new InvalidElement();
+elemInvalidPassword.bind("password-invalid");
+
+
+
+// Khai báo các đối tượng đại diện cho element input
+function InputElement() {
+    this.bind = function(elementID) {
+        this.element = document.getElementById(elementID);
+        console.assert(this.element, `fail to bind element width ID "${elementID}"`);
     }
-    
-    if ($('#email').val().match(/	
-        ^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/) == null){
-        $('#email').next('span').text('Email is invaid!');
-        isVaild = false;
-    } else{
-        $('#email').next('span').text('');
+}
+
+
+let elemInputPassword = new InputElement();
+elemInputPassword.bind('password');
+elemInputPassword.validate = function(testCase) {
+    let password;
+    let errorMessage = '';
+    let pass = true;
+    if (typeof testCase == 'string') password = testCase;
+    else password = this.element.value;
+    if (password.length < 8) {
+        errorMessage += "password should not shorter than 8 character<br >"
+        pass = false;
     }
-    return isVaild;
-});
+    // var patt = new RegExp("[A-Z]+");
+    if (!/[A-Z]+/.test(password)) {
+        errorMessage += "Password should have Capiatal character<br >"
+        pass = false;
+    }
+    if (!/[0-9]+/.test(password)) {
+        errorMessage += "Password should have number character<br >"
+        pass = false;
+    }
+    if (/[^a-zA-Z0-9]+/.test(password)) {
+        errorMessage += "Password should not have special character"
+        pass = false;
+    };
+    if (!pass) {
+        elemInvalidPassword.show(errorMessage);
+        return false;
+    }
+    elemInvalidPassword.hide();
+    return true
+}
+
+
+// Test case: 
+/*Một số test case: 
+Password1 -- pass
+Password1'--noPass
+Password2!@#$%^O(*&^' -- noPass
+password2!@#$%^(*&^' -- noPass
+password -- noPass
+password2 -- noPass
+Password -- noPass
+あPassword1 -- noPass*/
+
+/*console.log(elemInputPassword.validate('Password1'));
+
+console.log(elemInputPassword.validate("Password1'"));
+console.log(elemInputPassword.validate(`Password2!@#$%^O(*&^`));
+console.log(elemInputPassword.validate(`password`));
+console.log(elemInputPassword.validate(`password2`));
+console.log(elemInputPassword.validate(`あPassword1`));*/
+
+function validateForm() {
+    if (!elemInputPassword.validate()) return false;
+    return true;
+}
