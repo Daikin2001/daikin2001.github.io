@@ -10,3 +10,9 @@ footer{
     color:white;
     height: 10vh;
 }
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
