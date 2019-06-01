@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Aclonica&display=swap');
+.nav-item{
+    padding: 0 20px;
+    text-align:center;
+}
+.icon1{
+    border-bottom:2px solid #1a75ff !important;
+}
+.icon2{
+    border-bottom:2px solid #e0ebeb;
+    padding-right:50px;
+    padding-left: 50px;
+}
+.section1{
+    border-bottom:2px solid #e0ebeb;
+    padding-bottom: 35px;
+    
+    
+}
+.section2{
+    background-color: #F2F2F2;
+}
+.logo{
+    width: 20%;
+    float: left;
+}
+.section3{
+    background-image: url(img/img14.png);
+    
+}
+.section4{
+    padding-left: 30px !important;
+    padding-top: 70px !important;
+}
+.navbar{
+    background-color: white !important;
+}
+.row{
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.tieude1{
+    font-family: 'Times Newer Roman', sans-serif;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+i{
+    font-family: 'Noto Serif', serif;
+    font-weight: italic;
+}
+p,li{
+    font-family: 'Aileron',sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: #808080;
+}
+li{
+    font-family: 'Aileron',sans-serif;
+    font-size: 16px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    color: #808080;
+}
+.tieude2{
+    color: #808080;
+    font-family: 'Aileron',sans-serif;
+    margin-bottom: 20px;
+}
+.btn{
+    font-family: 'Aileron',sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 7px 25px;
+    margin-right: 25px;
+}
+h2{
+    font-family: 'Aileron',sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    
+}
+.section01{
+    text-align: center;
+    padding:80px 150px;
+}
+.section5{
+    padding-top: 50px !important;
+    padding-left: 80px !important;
+}
+a{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+.card-group{
+    margin:3px;
+}
+.card-footer{
+    border:0px solid;
+}
