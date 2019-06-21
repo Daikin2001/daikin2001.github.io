@@ -20,7 +20,30 @@ function copyStr(str){
 }
 document.write(copyStr.repeat(10));
 
+// EX-3:
 
+var bai3 = function(a) {
+    var check = function(b) {
+        var result = "";
+        if (b.length < 11) {
+            document.write("<p>" + b + "</p");
+        } else {
+            for (var i = 0; i < 10; i++) {
+                result = result + b.charAt(i);
+                if (i == 9) {
+                    result = result + "...";
+                }
+            }
+            document.write("<p>" + result + "</p>");
+        }
+    };
+    if (typeof a == "number") {
+        a = String(a);
+        check(a);
+    } else {
+        check(a);
+    }
+};
 
 // EX-4
 function chonHocVien(arr){
