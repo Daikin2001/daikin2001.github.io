@@ -97,9 +97,10 @@ return arr.sort();
 
 sortStudents(["Dat","Thai","Binh","Hao","Oanh"]);
 
-const nums1 = [1,2,3];
+let nums1 = [1,2,3];
 
-const maxNums = [1,2,3,4];
+let maxNums = [1,2,3,4];
 
-const students = ['Nam','Hoa','Tuấn'];
-students.sort();
+let students = ['Nam','Hoa','Tuấn'];
+
+students.reverse();
