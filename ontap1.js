@@ -89,4 +89,15 @@ function captializeStr(string)
 }
 
 // EX-3
+function sortStudents(arr) {
+    //console.log(arr.sort);
+console.log(arr.sort());
+return arr.sort();
+}
+
+sortStudents(["Dat","Thai","Binh","Hao","Oanh"]);
+
+const nums1 = [1,2,3];
+
+const maxNums = [1,2,3,4];
 
