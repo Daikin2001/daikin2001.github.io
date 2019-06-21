@@ -32,7 +32,7 @@ function chonHocVien(arr){
     }
     return newarr;
 }
-var bai3 = function(a) {
+var grade = function(a) {
     document.write("<h2>Bài 3: Quy đổi điểm số sang điểm chữ</h2>");
     if (a >= 0 && a <= 3.9) {
         document.write("<p>Bạn được điểm F</p>");
