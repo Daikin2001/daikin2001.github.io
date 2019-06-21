@@ -5,6 +5,14 @@
 
 
 
+// EX-2:
+
+function copyStr(str){
+    const str = 'JavaScript';
+}
+document.write(copyStr.repeat(10));
+
+
 
 // EX-4
 function chonHocVien(arr){
