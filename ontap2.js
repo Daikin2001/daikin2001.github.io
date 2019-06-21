@@ -2,7 +2,15 @@
 
 // EX-1:
 
-
+function duplicate(str) {
+    var newStr = str;
+    for (var i = 1; i < 10; i++) {
+        newStr = newStr + "-" + str;
+    }
+    return newStr;
+}
+document.write(duplicate("123"));
+document.write("<br>");
 
 
 // EX-2:
