@@ -19,3 +19,11 @@ footer{
 img{
     width: 100%;
 }
+.price{
+    font-weight: bold;
+    font-size:20px;
+}
+.info{
+    font-size:21.5px;
+    font-weight: bold;
+}
