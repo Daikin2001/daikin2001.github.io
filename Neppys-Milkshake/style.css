@@ -27,3 +27,7 @@ img{
     font-size:21.5px;
     font-weight: bold;
 }
+.footer{
+    position: relative;
+    top: 30px;
+}
