@@ -1,3 +1,8 @@
 .background{
-    background-color: #FFD200;
+    background-image: url(../img/Background.png);
+    background-size: cover;
+}
+#navbar{
+    background-image: url(../img/Background.png);
+    background-size: cover;
 }
